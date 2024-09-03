@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "53b253cc-f57e-4b83-9ac9-2a5b4bbfab49",
+		"name": "menti",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34183787"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ip}}:8001/notes",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "8001",
+					"path": [
+						"notes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Дом\",\r\n    \"content\":\"такси\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ip}}:8001/notes",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "8001",
+					"path": [
+						"notes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"text\":\"кfрова\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://speller.yandex.net/services/spellservice.json/checkTexts?text=курова&text=в+дубне",
+					"protocol": "https",
+					"host": [
+						"speller",
+						"yandex",
+						"net"
+					],
+					"path": [
+						"services",
+						"spellservice.json",
+						"checkTexts"
+					],
+					"query": [
+						{
+							"key": "text",
+							"value": "курова"
+						},
+						{
+							"key": "text",
+							"value": "в+дубне"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "ip",
+			"value": "0.0.0.0"
+		}
+	]
+}
